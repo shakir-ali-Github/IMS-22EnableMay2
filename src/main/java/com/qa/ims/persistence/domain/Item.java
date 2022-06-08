@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Item {
 	
-	private Long items_id;
+	private Long itemsid;
 	private String itemsName;
 	private double price;
 	
@@ -13,17 +13,17 @@ public class Item {
 		this.setPrice(price);
 	}
 	
-	public Item(Long items_id, String itemsName, double price) {
-		this.setItems_id(items_id);
+	public Item(Long itemsid, String itemsName, double price) {
+		this.setItemsid(itemsid);
 		this.setItemsName(itemsName);
 		this.setPrice(price);
 	}
 	
-	public Long getItems_id() {
-		return items_id;
+	public Long getItemsid() {
+		return itemsid;
 	}
-	public void setItems_id(Long items_id) {
-		this.items_id = items_id;
+	public void setItemsid(Long itemsid) {
+		this.itemsid = itemsid;
 	}
 	public String getItemsName() {
 		return itemsName;
@@ -40,12 +40,12 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "item ID:" + items_id + " item name =" + itemsName + " price =" + price ;
+		return "item ID:" + itemsid + " item name =" + itemsName + " price =" + price ;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(itemsName, items_id, price);
+		return Objects.hash(itemsName, itemsid, price);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class Item {
 		if (getClass() != obj.getClass())
 			return false;
 		Item other = (Item) obj;
-		return Objects.equals(itemsName, other.itemsName) && Objects.equals(items_id, other.items_id)
+		return Objects.equals(itemsName, other.itemsName) && Objects.equals(itemsid, other.itemsid)
 				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price);
 	}
 	
