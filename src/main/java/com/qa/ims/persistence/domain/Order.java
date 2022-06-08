@@ -12,14 +12,14 @@ public class Order {
 	}
 	
 	public Order(Long order_id, Long fk_id) {
-		this.setOrder_id(order_id);
+		this.setOrder_Id(order_id);
 		this.setFk_id(fk_id);
 	}
 	
-	public Long getOrder_id() {
+	public Long getOrder_Id() {
 		return order_id;
 	}
-	public void setOrder_id(Long order_id) {
+	public void setOrder_Id(Long order_id) {
 		this.order_id = order_id;
 	}
 	public Long getFk_id() {
@@ -50,10 +50,6 @@ public class Order {
 		Order other = (Order) obj;
 		return Objects.equals(fk_id, other.fk_id) && Objects.equals(order_id, other.order_id);
 	}
-	
-	
-	
-	
 	
 	
 
