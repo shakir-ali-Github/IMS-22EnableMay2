@@ -22,9 +22,9 @@ public class OrderItemDAO implements Dao<OrderItem>{
 	public OrderItem modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long order_itemsID = resultSet.getLong("order_itemsID");
 		Long fk_order_id = resultSet.getLong("fk_order_id");
-		Long fk_items_id = resultSet.getLong("fk_items_id");
+		Long fk_itemsid = resultSet.getLong("fk_itemsid");
 		Long quantity = resultSet.getLong("quantity");
-		return new OrderItem(order_itemsID, fk_order_id, fk_items_id, quantity);
+		return new OrderItem(order_itemsID, fk_order_id, fk_itemsid, quantity);
 	}
 
 	/**
@@ -71,10 +71,10 @@ public class OrderItemDAO implements Dao<OrderItem>{
 	public OrderItem create(OrderItem orders_items) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
-						.prepareStatement("INSERT INTO orders_items(fk_order_id, fk_itemsid, quantity) VALUES (?, ?. ?)");) {
+						.prepareStatement("INSERT INTO orders_items(fk_order_id, fk_itemsid, quantity) VALUE (?, ?, ?)");) {
 			statement.setLong(1, orders_items.getFk_order_id());
 			statement.setLong(2, orders_items.getFk_itemsid());
-			statement.setLong(2, orders_items.getQuantity());
+			statement.setLong(3, orders_items.getQuantity());
 			statement.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
