@@ -9,6 +9,12 @@ public class OrderItem {
 	private Long fk_itemsid;
 	private Long quantity;
 	
+	public OrderItem(Long fk_order_id, Long fk_itemsid, Long quantity) {
+		this.setFk_order_id(fk_order_id);
+		this.setFk_itemsid(fk_itemsid);
+		this.setQuantity(quantity);
+	}
+	
 	public OrderItem(Long order_itemsID, Long fk_order_id, Long fk_itemsid, Long quantity) {
 		this.setOrder_itemsID(order_itemsID);
 		this.setFk_order_id(fk_order_id);
