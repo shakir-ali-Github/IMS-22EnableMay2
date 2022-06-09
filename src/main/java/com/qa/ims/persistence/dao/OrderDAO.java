@@ -107,7 +107,7 @@ public class OrderDAO implements Dao<Order> {
 	public Order update(Order order) {
 	try (Connection connection = DBUtils.getInstance().getConnection();
 	PreparedStatement statement = connection
-	.prepareStatement("UPDATE `order` SET fk_id = ? WHERE order_id = ?");) {
+	.prepareStatement("UPDATE orders SET fk_id = ? WHERE order_id = ?");) {
 	statement.setLong(1, order.getFk_id());
 	statement.setLong(2, order.getOrder_Id());
 	statement.executeUpdate();
