@@ -1,7 +1,8 @@
-Coverage: 34%
+Coverage: 70.3%
 # Project Title
+Inventory Management System(IMS)
 
-One Paragraph of project description goes here
+Application that allows you to store and manage customers, items and orders using a command line.
 
 ## Getting Started
 
@@ -11,27 +12,20 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+Java
+MySQL
+Ecclipse
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Download Java
+https://www.oracle.com/uk/java/technologies/javase/javase-jdk8-downloads.html
 
-Say what the step will be
+Download MySQL
+https://www.mysql.com/downloads/
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Download Ecclipse
+https://www.ecclipse.org/downloads/
 
 ## Running the tests
 
@@ -70,11 +64,14 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning.
+We use GitHub for versioning.
 
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+
+* **Syed Shakir Ali** - *work* -[syedshakirali]
+(https://github.com/shakir-ali-Github)
 
 ## License
 
